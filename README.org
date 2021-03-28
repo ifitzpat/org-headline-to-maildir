@@ -39,6 +39,14 @@ Installing with [[https://framagit.org/steckerhalter/quelpa][Quelpa]] is easy:
 2.  Add this form to your init file:
 
 #+BEGIN_SRC elisp
+  (use-package org-headline-to-maildir
+       :ensure-system-package rdrview
+       :commands org-headline-to-maildir
+       :ensure t
+       :quelpa (org-headline-to-maildir :fetcher github :repo "ifitzpat/org-headline-to-maildir")
+       :config
+       (setq org-headline-to-maildir-file "/path/to/org-file.org")
+       (setq org-headline-to-maildir-directory "/path/to/maildir"))
 
 #+END_SRC
 
