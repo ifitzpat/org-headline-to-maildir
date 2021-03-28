@@ -1,0 +1,65 @@
+#+TITLE: Org-headline-to-maildir
+
+# Style copied from org-ql's readme.
+
+# NOTE: Using =BEGIN_HTML= for this causes TeX/info export to fail, but this HTML block works.
+# #+HTML: <a href=https://alphapapa.github.io/dont-tread-on-emacs/><img src="images/dont-tread-on-emacs-150.png" align="right"></a>
+#+HTML: <img src="" align="right">
+
+# NOTE: To avoid having this in the info manual, we use HTML rather than Org syntax; it still appears with the GitHub renderer.
+#+HTML: <a href="https://melpa.org/#/"><img src="https://melpa.org/packages/-badge.svg"></a> <a href="https://stable.melpa.org/#/"><img src="https://stable.melpa.org/packages/-badge.svg"></a>
+
+
+
+* Contents
+:PROPERTIES:
+:TOC:      :include siblings :depth 0 :ignore this :force depth
+:END:
+:CONTENTS:
+- [[#screenshots][Screenshots]]
+- [[#installation][Installation]]
+- [[#usage][Usage]]
+- [[#changelog][Changelog]]
+:END:
+
+
+* Screenshots
+
+
+* Installation
+:PROPERTIES:
+:TOC:      ignore-children
+:END:
+
+** Quelpa
+
+Installing with [[https://framagit.org/steckerhalter/quelpa][Quelpa]] is easy:
+
+1.  Install [[https://framagit.org/steckerhalter/quelpa-use-package#installation][quelpa-use-package]] (which can be installed directly from MELPA).
+2.  Add this form to your init file:
+
+#+BEGIN_SRC elisp
+
+#+END_SRC
+
+* Usage
+:PROPERTIES:
+:TOC:      :include descendants :depth 1
+:END:
+
+* Changelog
+:PROPERTIES:
+:TOC:      ignore-children
+:END:
+
+* Notes
+:PROPERTIES:
+:TOC:      :ignore this
+:END:
+
+* License
+:PROPERTIES:
+:TOC:      :ignore this
+:END:
+
+GPLv3
