@@ -194,16 +194,17 @@ X-org-headline-to-maildir-simple-hash: %s
   (org-headline-to-maildir--find-all machine-hostname (or (all-tags-at-point) "")))
 
 (defun toggle-machine-name ()
-  (org-toggle-tag machine-hostname 'on)
-  (save-buffer))
+  (org-toggle-tag machine-hostname 'on))
 
 (defun send-untagged-to-maildir ()
   (let ((start (start-of-org-element-at-point)))
     (if (not (tagged?))
 	(save-excursion
-	  (mapc 'write-url-to-maildir (retrieve-url-in-body (end-of-org-element-at-point)))
+	  (mapc 'write-url-to-maildir (retrieve-url-in-body (or (end-of-org-element-at-point) (+ (point) 100))))
 	  (goto-char start)
-	  (toggle-machine-name)))))
+	  (toggle-machine-name)
+	  (save-buffer)
+	  ))))
 
 ;;;; Footer
 
