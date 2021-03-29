@@ -194,7 +194,8 @@ X-org-headline-to-maildir-simple-hash: %s
   (org-headline-to-maildir--find-all machine-hostname (or (all-tags-at-point) "")))
 
 (defun toggle-machine-name ()
-  (org-toggle-tag machine-hostname 'on))
+  (org-toggle-tag machine-hostname 'on)
+  (save-buffer))
 
 (defun send-untagged-to-maildir ()
   (let ((start (start-of-org-element-at-point)))
